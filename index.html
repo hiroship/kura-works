@@ -46,7 +46,6 @@
   :focus-visible { outline: 2px solid var(--accent); outline-offset: 4px; border-radius: 4px; }
   .skip { position: absolute; left: 16px; top: -64px; z-index: 90; background: var(--ink); color: var(--bg); padding: 8px 12px; border-radius: 8px; text-decoration: none; transition: transform 300ms var(--curve); }
   .skip:focus { transform: translateY(80px); }
-  .draft { background: var(--deep); color: #C9D2E3; font-size: 12px; line-height: 16px; padding: 8px 16px; text-align: center; }
 
   /* ボタン */
   .btn { display: inline-flex; align-items: center; gap: 12px; min-height: 48px; padding: 8px 8px 8px 24px; border-radius: 9999px; background: var(--accent); color: #fff; font-size: 16px; line-height: 24px; font-weight: 600; text-decoration: none; border: 0; cursor: pointer; font-family: var(--font); transition: transform 500ms var(--curve), background-color 300ms var(--curve); }
@@ -393,7 +392,6 @@
 </head>
 <body>
 <a class="skip" href="#main">本文へ移動</a>
-<div class="draft" role="note">公開前の下書きです（検索には表示されません）。問い合わせ先は仮です。</div>
 
 <header>
   <nav class="nav" id="nav" aria-label="メインメニュー">
@@ -726,7 +724,7 @@
 
   // ナビ：上の帯を過ぎたら上に寄せる。今見ている場所を表示。スマホの申し込みバー
   var nav = document.getElementById('nav'), mbar = document.getElementById('mbar');
-  new IntersectionObserver(function (es) { es.forEach(function (e) { nav.classList.toggle('stuck', !e.isIntersecting); }); }).observe(document.querySelector('.draft'));
+  new IntersectionObserver(function (es) { es.forEach(function (e) { nav.classList.toggle('stuck', !e.isIntersecting); }); }).observe(document.querySelector('header'));
   new IntersectionObserver(function (es) {
     es.forEach(function (e) { var past = !e.isIntersecting && e.boundingClientRect.top < 0; mbar.classList.toggle('show', past); mbar.setAttribute('aria-hidden', String(!past)); mbar.querySelector('a').setAttribute('tabindex', past ? '0' : '-1'); });
   }).observe(document.querySelector('.hero .acts'));
