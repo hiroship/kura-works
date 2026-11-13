@@ -355,6 +355,7 @@
   <nav class="nav" id="nav" aria-label="メインメニュー">
     <a class="logo" href="#top" aria-label="Kura Works トップへ"><img class="mk" src="logo/mark.svg" alt="" width="32" height="32"><span class="wm">Kura<b>Works</b></span></a>
     <ul>
+      <li><a href="#examples">サイトの例</a></li>
       <li><a href="#flow">流れ</a></li>
       <li><a href="#price">料金</a></li>
       <li><a href="#about">作っている人</a></li>
@@ -364,6 +365,7 @@
     <button class="menu-btn" type="button" aria-label="メニューを開く" aria-expanded="false" aria-controls="panel"><span></span><span></span></button>
   </nav>
   <div class="panel" id="panel">
+    <a href="#examples">サイトの例</a>
     <a href="#flow">始めるまでの流れ</a>
     <a href="#price">料金</a>
     <a href="#about">作っている人</a>
@@ -427,14 +429,14 @@
   <!-- 3. サイトの例 -->
   <section class="s" id="examples">
     <div class="wrap">
-      <div class="sh c rv"><span class="lb">サイトの例</span><h2>こんなホームページを<br>お作りします。</h2><p>制作費0円で、まずは御社専用のサンプルを作ってお見せします。キャンペーン中は、先着5社が12か月間 月額7,800円（税込）です。</p></div>
+      <div class="sh c rv"><span class="lb">サイトの例</span><h2>こんなホームページを<br>お作りします。</h2><p>施工事例・対応エリア・問い合わせ先を、スマホで見やすい1ページにまとめます。まずは御社専用のサンプルを無料で作ってお見せします。以下は導入実績ではなく、提案用に作成したサンプルの例です。</p></div>
       <div class="ex2 rv">
-        <figure><img src="samples/sample-chill.jpg" alt="造園会社のサンプルページ（スマホ表示）" loading="lazy"><figcaption><b>造園・植木屋</b><span>藤沢市</span></figcaption></figure>
-        <figure><img src="samples/sample-daikichi.jpg" alt="造園会社のサンプルページ（スマホ表示）" loading="lazy"><figcaption><b>造園</b><span>茅ヶ崎市</span></figcaption></figure>
-        <figure><img src="samples/sample-kurumi.jpg" alt="塗装会社のサンプルページ（スマホ表示）" loading="lazy"><figcaption><b>塗装</b><span>平塚市</span></figcaption></figure>
-        <figure><img src="samples/sample-tsutsui.jpg" alt="工務店のサンプルページ（スマホ表示）" loading="lazy"><figcaption><b>工務店</b><span>藤沢市</span></figcaption></figure>
-        <figure><img src="samples/sample-hamaya.jpg" alt="リフォーム会社のサンプルページ（スマホ表示）" loading="lazy"><figcaption><b>リフォーム</b><span>茅ヶ崎市</span></figcaption></figure>
-        <figure><img src="samples/sample-jun.jpg" alt="工務店のサンプルページ（スマホ表示）" loading="lazy"><figcaption><b>工務店</b><span>平塚市</span></figcaption></figure>
+        <figure><img src="samples/sample-chill.jpg" alt="造園会社のサンプルページ（スマホ表示）" loading="lazy"><figcaption><b>サンプル｜造園</b><span>藤沢市</span></figcaption></figure>
+        <figure><img src="samples/sample-daikichi.jpg" alt="造園会社のサンプルページ（スマホ表示）" loading="lazy"><figcaption><b>サンプル｜造園</b><span>茅ヶ崎市</span></figcaption></figure>
+        <figure><img src="samples/sample-kurumi.jpg" alt="塗装会社のサンプルページ（スマホ表示）" loading="lazy"><figcaption><b>サンプル｜塗装</b><span>平塚市</span></figcaption></figure>
+        <figure><img src="samples/sample-tsutsui.jpg" alt="工務店のサンプルページ（スマホ表示）" loading="lazy"><figcaption><b>サンプル｜工務店</b><span>藤沢市</span></figcaption></figure>
+        <figure><img src="samples/sample-hamaya.jpg" alt="リフォーム会社のサンプルページ（スマホ表示）" loading="lazy"><figcaption><b>サンプル｜リフォーム</b><span>茅ヶ崎市</span></figcaption></figure>
+        <figure><img src="samples/sample-jun.jpg" alt="工務店のサンプルページ（スマホ表示）" loading="lazy"><figcaption><b>サンプル｜工務店</b><span>平塚市</span></figcaption></figure>
       </div>
       <p class="ex-note rv">※ 実在の会社さまへの提案用に作成したサンプルページの例です。導入実績ではありません。</p>
     </div>
@@ -669,7 +671,7 @@
   applyIo.observe(document.getElementById('apply'));
   var navLinks = document.querySelectorAll('.nav ul a');
   var sio = new IntersectionObserver(function (es) { es.forEach(function (e) { if (!e.isIntersecting) return; navLinks.forEach(function (a) { a.classList.toggle('on', a.getAttribute('href') === '#' + e.target.id); }); }); }, { rootMargin: '-45% 0px -50% 0px' });
-  ['flow', 'price', 'about', 'faq'].forEach(function (id) { sio.observe(document.getElementById(id)); });
+  ['examples', 'flow', 'price', 'about', 'faq'].forEach(function (id) { sio.observe(document.getElementById(id)); });
 
 
 })();
