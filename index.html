@@ -4,10 +4,10 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
 <meta name="robots" content="noindex, nofollow">
-<title>Kura Works｜藤沢・湘南のお店のホームページを制作費0円で</title>
-<meta name="description" content="藤沢の現役システムエンジニア・デザイナーが、お店のホームページを先に無料で作ってお見せします。制作費0円、月9,800円から。AI で業務を楽にするご相談つきのプランもあります。">
-<meta property="og:title" content="Kura Works｜藤沢・湘南のお店のホームページを制作費0円で">
-<meta property="og:description" content="まずは無料でサンプルを作ってお見せします。気に入ったら月9,800円から。">
+<title>Kura Works｜湘南の職人さん・小さなお店のホームページを制作費0円で</title>
+<meta name="description" content="藤沢の現役エンジニアが、塗装・造園・工務店などのホームページを制作費0円で作ります。まず無料でサンプルをお見せします。キャンペーン中は先着5社限定で月額7,800円（通常9,800円・税込）。">
+<meta property="og:title" content="Kura Works｜湘南の職人さん・小さなお店のホームページを制作費0円で">
+<meta property="og:description" content="まず無料でサンプルを作ってお見せします。先着5社は12か月間 月額7,800円（通常9,800円）。">
 <meta property="og:image" content="og.png">
 <meta property="og:type" content="website">
 <meta name="twitter:card" content="summary_large_image">
@@ -96,13 +96,17 @@
   .hero .wrap { display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1.05fr); gap: 64px; align-items: center; }
   .kicker { display: inline-flex; align-items: center; gap: 8px; margin-bottom: 24px; padding: 4px 12px 4px 4px; border-radius: 9999px; background: var(--accent-soft); font-size: 14px; line-height: 20px; font-weight: 600; color: var(--ink); }
   .kicker b { white-space: nowrap; flex: none; background: var(--accent); color: #fff; border-radius: 9999px; padding: 2px 8px; font-size: 12px; line-height: 16px; }
+  .hero .who { margin-bottom: 12px; font-size: 15px; line-height: 24px; font-weight: 700; color: var(--accent); }
   .hero h1 { max-width: 680px; font-size: 48px; line-height: 1.4; letter-spacing: -0.01em; background: linear-gradient(90deg, #000000, #666666); -webkit-background-clip: text; background-clip: text; color: transparent; }
   .hero h1 .zero { color: var(--accent); -webkit-text-fill-color: var(--accent); }
   .hero .sub { max-width: 560px; margin-top: 24px; font-size: 18px; line-height: 32px; }
+  .hero .sub b { color: var(--ink); }
   .hero .acts { display: flex; align-items: center; gap: 16px 24px; flex-wrap: wrap; margin-top: 40px; }
   .hero .proof { display: flex; align-items: center; gap: 8px; margin-top: 24px; font-size: 14px; line-height: 20px; color: var(--body); }
   .hero .proof i { color: var(--accent); font-size: 20px; }
-  /* 作るホームページの見本（パソコンとスマホ）。HTML で組んだ架空のお店 */
+  .hero .checks { display: grid; gap: 8px; margin-top: 24px; }
+  .hero .checks .proof { margin-top: 0; }
+  /* 作るホームページの見本（パソコンとスマホ）。HTML で組んだ架空の会社 */
   .devices { position: relative; padding: 0 0 64px 0; }
   .browser { border-radius: 16px; background: var(--card); box-shadow: 0 40px 80px -40px rgba(15, 27, 45, .45); overflow: hidden; border: 1px solid var(--line); }
   .browser .bar { display: flex; align-items: center; gap: 8px; height: 32px; padding: 0 12px; background: var(--bg-2); }
@@ -147,7 +151,7 @@
     .float.f1 { left: 0; bottom: 24px; } .float.f2 { display: none; } .float { padding: 8px 12px; }
   }
 
-  /* 数字の帯 */
+  /* 約束の帯（旧・数字の帯） */
   .stats { border-top: 1px solid var(--line); border-bottom: 1px solid var(--line); background: var(--card); }
   .stats ul { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); margin: 0 auto; padding: 0; list-style: none; }
   .stats li { padding: 32px 24px; }
@@ -167,6 +171,7 @@
   .sh h2 { font-size: 36px; line-height: 1.45; letter-spacing: -0.01em; }
   .sh p { margin-top: 24px; font-size: 16px; line-height: 28px; }
   @media (max-width: 900px) { .s { padding: 64px 0; } .sh { margin-bottom: 32px; } .sh h2 { font-size: 24px; line-height: 1.5; } }
+  .center-cta { text-align: center; margin-top: 40px; }
 
   /* 悩み → 解決 */
   .ps { display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1fr); gap: 16px; }
@@ -183,51 +188,6 @@
   .ps .after b { color: #fff; }
   @media (max-width: 900px) { .ps { grid-template-columns: 1fr; } .ps .col { padding: 24px; } }
 
-  /* 良さ：大小のタイル */
-  .bento { display: grid; grid-template-columns: repeat(12, minmax(0, 1fr)); gap: 16px; }
-  .tile { border-radius: 24px; background: var(--card); padding: 32px; border: 1px solid var(--line); display: flex; flex-direction: column; }
-  .tile .ic { display: grid; place-items: center; width: 48px; height: 48px; border-radius: 12px; background: var(--accent-soft); color: var(--accent); font-size: 24px; margin-bottom: 24px; }
-  .tile h3 { font-size: 20px; line-height: 28px; margin-bottom: 12px; }
-  .tile p { font-size: 15px; line-height: 26px; }
-  .tile .big { margin-top: auto; padding-top: 24px; font-size: 48px; line-height: 1; font-weight: 700; color: var(--accent); letter-spacing: -0.03em; }
-  .tile .big small { font-size: 18px; letter-spacing: 0; }
-  .tile .vs { margin-top: 8px; font-size: 14px; line-height: 20px; color: var(--muted); }
-  .t1 { grid-column: span 5; grid-row: span 2; background: var(--accent); color: #DCE4F7; border-color: var(--accent); }
-  .t1 h3 { color: #fff; font-size: 24px; line-height: 32px; }
-  .t1 .ic { background: rgba(255, 255, 255, .16); color: #fff; }
-  .t1 .big { color: #fff; font-size: 96px; }
-  .t1 .vs { color: #C9D2E3; }
-  .t2, .t3, .t4 { grid-column: span 7; }
-  .t3, .t4 { grid-column: span 7; }
-  @media (min-width: 901px) { .t3 { grid-column: span 3; } .t4 { grid-column: span 4; } }
-  @media (max-width: 900px) { .bento { grid-template-columns: 1fr; gap: 8px; } .t1, .t2, .t3, .t4 { grid-column: auto; grid-row: auto; } .tile { padding: 24px; } .t1 .big { font-size: 72px; } }
-
-  /* 一言ずつ濃くなる一文 */
-  .tagline { padding: 96px 0; text-align: center; }
-  .tagline p { max-width: 860px; margin-inline: auto; font-size: 48px; line-height: 1.45; font-weight: 700; letter-spacing: -0.01em; color: var(--ink); }
-  .tagline .w { opacity: .28; transition: opacity 700ms var(--curve); }
-  .tagline .w.lit { opacity: 1; }
-  .tagline .w.ac.lit { color: var(--accent); }
-  .tagline .by { margin-top: 32px; font-size: 14px; line-height: 20px; color: var(--muted); }
-  @media (max-width: 900px) { .tagline { padding: 64px 0; } .tagline p { font-size: 30px; } }
-
-  /* サンプルの例 */
-  .ex { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 16px; }
-  .ex article { border-radius: 24px; background: var(--card); border: 1px solid var(--line); overflow: hidden; transition: transform 500ms var(--curve); }
-  .ex article:hover { transform: translateY(-4px); }
-  .ex .mock { position: relative; aspect-ratio: 4 / 3; display: grid; place-items: center; background: var(--bg-2); color: var(--ink); }
-  .ex article:hover .mock { color: var(--accent); }
-  .ex .mock i { transition: color 300ms var(--curve); }
-  .ex .mock i { font-size: 64px; }
-  .ex .mock .ln { position: absolute; left: 16px; right: 16px; bottom: 16px; display: grid; gap: 8px; }
-  .ex .mock .ln span { height: 8px; border-radius: 9999px; background: var(--card); }
-  .ex .mock .ln span:nth-child(2) { width: 60%; }
-  .ex .tx { padding: 24px; }
-  .ex h3 { font-size: 18px; line-height: 28px; }
-  .ex p { margin-top: 8px; font-size: 14px; line-height: 24px; }
-  .ex-note { margin-top: 24px; font-size: 14px; line-height: 20px; color: var(--muted); }
-  @media (max-width: 900px) { .ex { grid-template-columns: 1fr 1fr; gap: 8px; } .ex .tx { padding: 16px; } .ex .mock i { font-size: 48px; } }
-
   /* 料金 */
   .plans { display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1fr); gap: 24px; align-items: stretch; }
   .plan { position: relative; border-radius: 24px; background: var(--card); border: 1px solid var(--line); padding: 40px; display: flex; flex-direction: column; }
@@ -242,8 +202,9 @@
   .plan .camp { margin-top: 8px; font-size: 14px; line-height: 20px; color: var(--ink); font-weight: 700; background: var(--accent-soft); border-radius: 8px; padding: 8px 12px; }
   .campaign { margin-bottom: 24px; border-radius: 24px; background: var(--accent); color: #fff; padding: 28px 32px; }
   .campaign .tag { display: inline-block; font-size: 12px; line-height: 16px; font-weight: 700; background: #fff; color: var(--accent); padding: 4px 12px; border-radius: 9999px; margin-bottom: 12px; }
-  .campaign h3 { font-size: 22px; line-height: 30px; }
+  .campaign h3 { font-size: 22px; line-height: 30px; color: #fff; }
   .campaign h3 b { font-size: 30px; }
+  .campaign h3 s { font-size: 20px; opacity: .7; }
   .campaign p { margin-top: 8px; font-size: 14px; line-height: 22px; opacity: .92; }
   .plan ul { margin: 24px 0 32px; padding: 24px 0 0; list-style: none; display: grid; gap: 12px; border-top: 1px solid var(--line); }
   .plan li { display: grid; grid-template-columns: 24px 1fr; gap: 8px; font-size: 15px; line-height: 24px; }
@@ -261,21 +222,14 @@
   .cmp tbody th { color: var(--ink); }
   .cmp tr.me th, .cmp tr.me td { background: var(--accent-soft); color: var(--ink); font-weight: 700; }
   .cmp .src { padding: 12px 24px 24px; font-size: 12px; line-height: 16px; color: var(--muted); }
-  @media (max-width: 900px) { .plans { grid-template-columns: 1fr; gap: 32px; } .plan { padding: 32px 24px; } .plan .badge { left: 24px; } .terms { grid-template-columns: 1fr 1fr; gap: 8px; } .terms div { padding: 16px; } .cmp th, .cmp td { padding: 12px 16px; font-size: 14px; line-height: 20px; } .cmp caption { padding: 16px 16px 8px; } }
+  @media (max-width: 900px) { .plans { grid-template-columns: 1fr; gap: 32px; } .plan { padding: 32px 24px; } .plan .badge { left: 24px; } .terms { grid-template-columns: 1fr 1fr; gap: 8px; } .terms div { padding: 16px; } .cmp th, .cmp td { padding: 12px 16px; font-size: 14px; line-height: 20px; } .cmp caption { padding: 16px 16px 8px; } .campaign { padding: 24px; } }
 
-  /* AI コンサル */
-  .ai { display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1fr); gap: 64px; align-items: center; }
-  .ai .chat { border-radius: 24px; background: var(--card); border: 1px solid var(--line); padding: 24px; display: grid; gap: 12px; }
-  .ai .chat .cap { font-size: 12px; line-height: 16px; font-weight: 700; color: var(--muted); letter-spacing: .08em; }
-  .bub { max-width: 85%; padding: 12px 16px; border-radius: 16px; font-size: 14px; line-height: 22px; }
-  .bub.shop { justify-self: end; background: var(--accent); color: #fff; border-bottom-right-radius: 4px; }
-  .bub.you { background: var(--bg-2); color: var(--ink); border-bottom-left-radius: 4px; }
-  .bub small { display: block; font-size: 12px; line-height: 16px; opacity: .75; margin-bottom: 4px; }
-  .ai ul { margin: 32px 0 0; padding: 0; list-style: none; display: grid; grid-template-columns: 1fr 1fr; gap: 8px; }
-  .ai li { display: flex; align-items: center; gap: 8px; padding: 12px 16px; border-radius: 12px; background: var(--card); font-size: 14px; line-height: 20px; color: var(--ink); }
-  .ai li i { color: var(--accent); font-size: 20px; }
-  .ai .note { margin-top: 16px; font-size: 14px; line-height: 20px; color: var(--muted); }
-  @media (max-width: 900px) { .ai { grid-template-columns: 1fr; gap: 32px; } .ai ul { grid-template-columns: 1fr; } }
+  /* AI コンサル（縮小版） */
+  .ai-list { margin: 0; padding: 0; list-style: none; display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 8px; max-width: 960px; }
+  .ai-list li { display: flex; align-items: center; gap: 8px; padding: 12px 16px; border-radius: 12px; background: var(--card); font-size: 14px; line-height: 20px; color: var(--ink); }
+  .ai-list li i { color: var(--accent); font-size: 20px; }
+  .ai-note { margin-top: 16px; font-size: 14px; line-height: 20px; color: var(--muted); max-width: 680px; }
+  @media (max-width: 900px) { .ai-list { grid-template-columns: 1fr; } }
 
   /* 流れ */
   .flow { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 16px; margin: 0; padding: 0; list-style: none; counter-reset: f; }
@@ -287,11 +241,16 @@
   @media (max-width: 900px) { .flow { grid-template-columns: 1fr; gap: 8px; } .flow li { padding: 24px; } }
 
   /* 作っている人 */
-  .maker { display: grid; grid-template-columns: 200px minmax(0, 1fr); gap: 48px; align-items: center; border-radius: 24px; background: var(--card); border: 1px solid var(--line); padding: 48px; }
+  .maker { display: grid; grid-template-columns: 200px minmax(0, 1fr); gap: 48px; align-items: start; border-radius: 24px; background: var(--card); border: 1px solid var(--line); padding: 48px; }
   .maker .av { width: 200px; height: 200px; border-radius: 9999px; background: var(--accent-soft); display: grid; place-items: center; color: var(--accent); font-size: 96px; }
   .maker h3 { font-size: 24px; line-height: 32px; }
+  .maker h3 .kana { font-size: 15px; color: var(--muted); font-weight: 600; margin-left: 8px; }
   .maker .role { margin-top: 4px; font-size: 14px; line-height: 20px; color: var(--accent); font-weight: 700; }
   .maker p { margin-top: 16px; }
+  .pledge { margin: 24px 0 0; padding: 24px 0 0; list-style: none; display: grid; gap: 12px; border-top: 1px solid var(--line); }
+  .pledge .ph-t { font-size: 14px; line-height: 20px; font-weight: 700; color: var(--ink); letter-spacing: .08em; }
+  .pledge li:not(.ph-t) { display: grid; grid-template-columns: 24px 1fr; gap: 8px; font-size: 15px; line-height: 24px; }
+  .pledge li i { color: var(--accent); font-size: 20px; line-height: 24px; }
   @media (max-width: 900px) { .maker { grid-template-columns: 1fr; gap: 24px; padding: 32px 24px; justify-items: start; } .maker .av { width: 96px; height: 96px; font-size: 48px; } }
 
   /* よくある質問 */
@@ -312,20 +271,7 @@
   .cta-box ul { margin: 32px 0 0; padding: 0; list-style: none; display: grid; gap: 12px; }
   .cta-box li { display: flex; align-items: center; gap: 8px; font-size: 15px; line-height: 24px; }
   .cta-box li i { color: #8FB0FF; font-size: 20px; }
-  form { display: grid; gap: 16px; background: var(--card); color: var(--body); border-radius: 16px; padding: 32px; }
-  form label { display: grid; gap: 8px; font-size: 14px; line-height: 20px; font-weight: 700; color: var(--ink); }
-  form label small { font-weight: 500; color: var(--muted); }
-  form input, form select, form textarea { width: 100%; min-height: 48px; padding: 12px 16px; border-radius: 12px; border: 1px solid var(--line); background: var(--bg); font-family: var(--font); font-size: 16px; line-height: 24px; color: var(--ink); transition: border-color 300ms var(--curve); }
-  form textarea { min-height: 96px; resize: vertical; }
-  form input:focus, form select:focus, form textarea:focus { outline: none; border-color: var(--accent); }
-  form .err { display: none; font-size: 12px; line-height: 16px; color: #A0442F; font-weight: 600; }
-  form .bad input, form .bad select { border-color: #A0442F; }
-  form .bad .err { display: block; }
-  form .row2 { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; }
-  form .btn { justify-self: start; }
-  form .msg { display: none; border-radius: 12px; background: var(--accent-soft); color: var(--ink); padding: 12px 16px; font-size: 14px; line-height: 20px; }
-  form .msg.show { display: block; }
-  @media (max-width: 900px) { .cta-box { grid-template-columns: 1fr; padding: 40px 24px; gap: 32px; } .cta-box h2 { font-size: 24px; } form { padding: 24px 16px; } form .row2 { grid-template-columns: 1fr; } }
+  @media (max-width: 900px) { .cta-box { grid-template-columns: 1fr; padding: 40px 24px; gap: 32px; } .cta-box h2 { font-size: 24px; } }
 
   footer { padding: 48px 0 64px; font-size: 14px; line-height: 20px; color: var(--muted); }
   footer .wrap { display: flex; justify-content: space-between; align-items: center; gap: 16px; flex-wrap: wrap; }
@@ -345,8 +291,7 @@
   @media (prefers-reduced-motion: reduce) {
     html { scroll-behavior: auto; }
     .rv { transform: none; transition: opacity 300ms var(--curve); }
-    .btn, .btn .arr, .ex article, .panel a, .menu-btn span, .mbar { transition: none; transform: none; }
-    .tagline .w { transition: opacity 300ms var(--curve); }
+    .btn, .btn .arr, .panel a, .menu-btn span, .mbar { transition: none; transform: none; }
   }
 
   /* マスコット「エンジニアカワセミ」：小さめに添える */
@@ -357,8 +302,6 @@
   .kp-corner { position: absolute; right: 16px; top: -40px; width: 88px; }
   .kp-wrap { position: relative; }
   .kp-side { position: absolute; left: -112px; top: 0; width: 104px; }
-  .ai .chat { position: relative; }
-  .kp-chat { position: absolute; right: -24px; top: -72px; width: 96px; }
   .maker .av { overflow: hidden; }
   .maker .av img { width: 76%; height: auto; margin-top: 8%; }
   .kp-name { font-size: 14px; line-height: 20px; color: var(--muted); }
@@ -371,7 +314,6 @@
     .kp-hero { left: auto; right: 8px; top: -56px; width: 80px; }
     .kp-corner { width: 72px; top: -32px; }
     .kp-side { position: static; width: 80px; margin: 0 auto 8px; }
-    .kp-chat { width: 72px; right: 8px; top: -48px; }
     .kp-faq { display: none; }
     .kp-apply { width: 80px; }
   }
@@ -390,8 +332,6 @@
   .contact-choice p { margin: 0; font-size: 14px; line-height: 1.9; }
   .contact-choice .btn { justify-self: start; }
   .contact-choice .contact-id { color: var(--muted); font-size: 12px; }
-  .contact-choice ol { margin: 0; padding-left: 22px; }
-  .contact-choice li { display: list-item; font-size: 12px; line-height: 1.9; margin-bottom: 8px; }
   .contact-choice .contact-note { font-size: 12px; color: var(--muted); }
   @media (max-width: 900px) { .contact-choice { padding: 24px 20px; } .contact-choice h3 { font-size: 21px; } }
 </style>
@@ -403,20 +343,18 @@
   <nav class="nav" id="nav" aria-label="メインメニュー">
     <a class="logo" href="#top" aria-label="Kura Works トップへ"><img class="mk" src="logo/mark.svg" alt="" width="32" height="32"><span class="wm">Kura<b>Works</b></span></a>
     <ul>
-      <li><a href="#why">できること</a></li>
-      <li><a href="#price">料金</a></li>
-      <li><a href="#ai">AI コンサル</a></li>
       <li><a href="#flow">流れ</a></li>
+      <li><a href="#price">料金</a></li>
+      <li><a href="#about">作っている人</a></li>
       <li><a href="#faq">よくある質問</a></li>
     </ul>
     <a class="btn sm" href="#apply">無料でサンプルを頼む</a>
     <button class="menu-btn" type="button" aria-label="メニューを開く" aria-expanded="false" aria-controls="panel"><span></span><span></span></button>
   </nav>
   <div class="panel" id="panel">
-    <a href="#why">できること</a>
-    <a href="#price">料金</a>
-    <a href="#ai">AI コンサル</a>
     <a href="#flow">始めるまでの流れ</a>
+    <a href="#price">料金</a>
+    <a href="#about">作っている人</a>
     <a href="#faq">よくある質問</a>
     <a class="btn" href="#apply">無料でサンプルを頼む<span class="arr"><i class="ph ph-arrow-right"></i></span></a>
   </div>
@@ -427,45 +365,50 @@
   <section class="hero" id="top">
     <div class="wrap">
       <div>
-        <span class="kicker"><b>制作費0円</b>湘南のお店のために、藤沢の現役エンジニアが作ります</span>
-        <h1>お店のホームページ、<br><span class="zero">制作費0円</span>で作ります。</h1>
-        <p class="sub">まず、あなたのお店のホームページを無料で作ってお見せします。気に入ったら月9,800円から公開できます。</p>
+        <span class="kicker"><b>サービス開始キャンペーン</b>11月30日までのご相談・先着5社</span>
+        <p class="who">藤沢・湘南の職人さん、小さなお店へ</p>
+        <h1>ホームページ、<span class="zero">制作費0円</span>。<br>まず無料で作って、お見せします。</h1>
+        <p class="sub">塗装・造園・工務店などのホームページを、藤沢の現役エンジニアが作ります。InstagramやGoogleマップの情報をもとに、御社専用のサンプルを先にお作りします。頼むかどうかは、見てから決めてください。公開する場合のみ月額9,800円（税込）〜。<b>今なら先着5社は、12か月間 月額7,800円です。</b></p>
         <div class="acts">
           <a class="btn" href="#apply">無料でサンプルを頼む<span class="arr"><i class="ph ph-arrow-right"></i></span></a>
           <a class="tlink" href="#price">料金を見る</a>
         </div>
-        <p class="proof"><i class="ph ph-seal-check"></i>サンプル作成は無料。ご了承いただくまで、費用は一切かかりません。</p>
+        <div class="checks">
+          <p class="proof"><i class="ph ph-check-circle"></i>DMで「サンプル希望」と送るだけ</p>
+          <p class="proof"><i class="ph ph-check-circle"></i>ご契約まで費用0円</p>
+          <p class="proof"><i class="ph ph-check-circle"></i>見てからお断りいただいても大丈夫です</p>
+        </div>
       </div>
       <div class="devices rv" aria-label="作るホームページのイメージ">
         <img class="kp kp-hero" src="logo/kawasemi-geo/tewofuru.svg" alt="" aria-hidden="true">
         <div class="browser">
-          <div class="bar" aria-hidden="true"><i></i><i></i><i></i><span>bakery-komugi.jp</span></div>
+          <div class="bar" aria-hidden="true"><i></i><i></i><i></i><span>aozora-tosou.jp</span></div>
           <div class="site" aria-hidden="true">
-            <div class="s-nav"><b>ベーカリー こむぎ</b><span>メニュー</span><span>アクセス</span><span>お知らせ</span></div>
+            <div class="s-nav"><b>あおぞら塗装</b><span>施工事例</span><span>対応エリア</span><span>料金の目安</span><em>お見積り・ご相談</em></div>
             <div class="s-hero">
-              <div class="s-copy"><small>藤沢・辻堂の小さなパン屋</small><strong>朝7時、<br>焼きたてから。</strong><em>今日のパンを見る</em></div>
-              <div class="s-ph"><i class="ph ph-bread"></i></div>
+              <div class="s-copy"><small>藤沢・茅ヶ崎の外壁塗装</small><strong>塗り替えで、<br>家を長持ち。</strong><em>施工事例を見る</em></div>
+              <div class="s-ph"><i class="ph ph-paint-roller"></i></div>
             </div>
-            <div class="s-grid"><div><i class="ph ph-cake"></i><b>クロワッサン</b><span>¥260</span></div><div><i class="ph ph-cookie"></i><b>焼き菓子</b><span>¥180〜</span></div><div><i class="ph ph-coffee"></i><b>コーヒー</b><span>¥350</span></div></div>
+            <div class="s-grid"><div><i class="ph ph-house"></i><b>外壁塗装</b><span>施工事例あり</span></div><div><i class="ph ph-umbrella"></i><b>屋根塗装</b><span>施工事例あり</span></div><div><i class="ph ph-calculator"></i><b>お見積り</b><span>無料</span></div></div>
           </div>
         </div>
         <div class="phone" aria-hidden="true">
-          <div class="p-site"><b>ベーカリー こむぎ</b><div class="s-ph"><i class="ph ph-bread"></i></div><strong>朝7時、焼きたてから。</strong><span class="ln"></span><span class="ln short"></span></div>
+          <div class="p-site"><b>あおぞら塗装</b><div class="s-ph"><i class="ph ph-paint-roller"></i></div><strong>塗り替えで、家を長持ち。</strong><em>お見積り・ご相談</em><span class="ln"></span><span class="ln short"></span></div>
         </div>
-        <div class="float f1" aria-hidden="true"><i class="ph ph-check-circle"></i><span><b>営業時間を更新しました</b>ご連絡から当日中に反映</span></div>
-        <div class="float f2" aria-hidden="true"><i class="ph ph-currency-jpy"></i><span><b>制作費 0円</b>月9,800円から</span></div>
-        <p class="mock-note">画面は架空のお店のイメージです</p>
+        <div class="float f1" aria-hidden="true"><i class="ph ph-check-circle"></i><span><b>施工事例を追加しました</b>公開後の更新もおまかせ</span></div>
+        <div class="float f2" aria-hidden="true"><i class="ph ph-currency-jpy"></i><span><b>制作費 0円</b>キャンペーン中 月7,800円</span></div>
+        <p class="mock-note">画面は架空の会社のイメージです</p>
       </div>
     </div>
   </section>
 
-  <!-- 2. 数字の帯 -->
+  <!-- 2. 約束の帯 -->
   <div class="stats rv">
     <ul class="wrap">
       <li><b class="num">0<small>円</small></b><span>ホームページの制作費</span></li>
-      <li><b class="num">9,800<small>円〜</small></b><span>月々の運営費（税込）</span></li>
-      <li><b class="num">39<small>店分</small></b><span>これまでに作ったサンプル</span></li>
-      <li><b class="num">0<small>円</small></b><span>ご了承いただくまでの費用</span></li>
+      <li><b class="num">0<small>円</small></b><span>ご契約までの費用</span></li>
+      <li><b class="num">7,800<small>円</small></b><span>キャンペーン価格（先着5社・12か月間／通常 月9,800円・税込）</span></li>
+      <li><b class="num">6<small>か月〜</small></b><span>最低契約期間。以降はいつでも解約できます</span></li>
     </ul>
   </div>
 
@@ -479,87 +422,65 @@
           <h3>よくあるお悩み</h3>
           <ul>
             <li><i class="ph ph-x-circle"></i>制作会社に頼むと、数十万円かかると聞いた</li>
-            <li><i class="ph ph-x-circle"></i>何を載せればいいのか、どう頼めばいいのか分からない</li>
-            <li><i class="ph ph-x-circle"></i>作っても、営業時間や料金の更新が面倒になりそう</li>
+            <li><i class="ph ph-x-circle"></i>現場が忙しくて、打ち合わせや原稿を用意する時間がない</li>
+            <li><i class="ph ph-x-circle"></i>Instagramはやっているが、施工事例・対応エリア・料金の目安をまとめて見せる場所がない</li>
+            <li><i class="ph ph-x-circle"></i>作っても、更新できずに放置してしまいそう</li>
           </ul>
         </div>
         <div class="col after">
           <img class="kp kp-corner" src="logo/kawasemi-geo/banzai.svg" alt="" aria-hidden="true" loading="lazy">
           <h3>Kura Works なら</h3>
           <ul>
-            <li><i class="ph ph-check-circle"></i><span><b>制作費0円。</b>月9,800円から始められます</span></li>
-            <li><i class="ph ph-check-circle"></i><span><b>先にこちらで作ってお見せします。</b>見てから決められます</span></li>
-            <li><i class="ph ph-check-circle"></i><span><b>更新は連絡するだけ。</b>変更はこちらで行います</span></li>
+            <li><i class="ph ph-check-circle"></i><span><b>制作費0円。</b>月9,800円から（先着5社は7,800円）始められます</span></li>
+            <li><i class="ph ph-check-circle"></i><span><b>原稿は不要です。</b>こちらで先に作ってお見せします</span></li>
+            <li><i class="ph ph-check-circle"></i><span><b>施工事例・対応エリア・問い合わせ先を、</b>1ページにまとめます</span></li>
+            <li><i class="ph ph-check-circle"></i><span><b>更新はDMで連絡するだけ。</b>変更はこちらで反映します</span></li>
           </ul>
         </div>
       </div>
     </div>
   </section>
 
-  <!-- 4. 良さ -->
-  <section class="s b2" id="why">
+  <!-- 4. 流れ -->
+  <section class="s b2" id="flow">
     <div class="wrap">
-      <div class="sh rv"><span class="lb">できること</span><h2>作るところから、<br>そのあとの運営まで。</h2></div>
-      <div class="bento">
-        <article class="tile t1 rv">
-          <span class="ic"><i class="ph ph-piggy-bank"></i></span>
-          <h3>制作費は0円</h3>
-          <p>デザイン、文章づくり、スマホ対応まで、作るのにかかる費用はいただきません。かかるのは月々の運営費だけです。</p>
-          <div class="big num">0<small>円</small></div>
-          <p class="vs">一般的な制作会社の目安は20〜50万円</p>
-        </article>
-        <article class="tile t2 rv">
-          <span class="ic"><i class="ph ph-eye"></i></span>
-          <h3>完成品を見てから決められる</h3>
-          <p>Instagram や地図に出ている情報をもとに、先にサンプルを作ってお見せします。実際に動くページを見てから、頼むかどうかを決めてください。</p>
-        </article>
-        <article class="tile t3 rv">
-          <span class="ic"><i class="ph ph-arrows-clockwise"></i></span>
-          <h3>更新もおまかせ</h3>
-          <p>営業時間や料金が変わったら、連絡するだけ。ライトは月5回まで、スタンダードは回数無制限です。</p>
-        </article>
-        <article class="tile t4 rv">
-          <span class="ic"><i class="ph ph-sparkle"></i></span>
-          <h3>AI で仕事を楽に</h3>
-          <p>スタンダードなら、業務の流れをお聞きして、AI で楽にできる所を一緒に探します。</p>
-        </article>
-      </div>
+      <div class="sh c rv"><span class="lb">始めるまでの流れ</span><h2>やることは、<br>DMを1通送るだけ。</h2></div>
+      <ol class="flow rv">
+        <li><span class="n">1</span><h3>DMを送る</h3><p>InstagramのDMで「サンプル希望」と送ってください。すでにこちらからDMが届いている方は、そのDMへの返信で大丈夫です。</p><span class="free">無料</span></li>
+        <li><span class="n">2</span><h3>サンプルをお届け</h3><p>InstagramやGoogleマップの情報をもとに、御社専用のサンプルを作ってURLをお送りします。スマホで見て確かめられます。</p><span class="free">無料</span></li>
+        <li><span class="n">3</span><h3>見て、決める</h3><p>写真・文章・載せる内容をご相談しながら仕上げます。合わなければ、この時点でお断りいただいて大丈夫です。</p></li>
+        <li><span class="n">4</span><h3>公開・運営スタート</h3><p>ご契約のあとに公開します。公開後の更新は、DMで連絡するだけ。こちらで反映します。</p></li>
+      </ol>
+      <div class="center-cta rv"><a class="btn" href="#apply">無料でサンプルを頼む<span class="arr"><i class="ph ph-arrow-right"></i></span></a></div>
     </div>
   </section>
 
-  <!-- 5. 一言ずつ濃くなる一文（理念） -->
-  <section class="tagline" aria-label="このサービスの考え">
-    <div class="wrap">
-      <p id="tagline">格安で、個人のお店や中小企業も、ホームページを持てるように。</p>
-      <p class="by">藤沢の現役システムエンジニア、デザイナー　KURA</p>
-    </div>
-  </section>
-
-  <!-- 7. 料金 -->
+  <!-- 5. 料金 -->
   <section class="s" id="price">
     <div class="wrap">
       <div class="sh c rv kp-wrap"><img class="kp kp-side" src="logo/kawasemi-geo/yubisashi.svg" alt="" aria-hidden="true" loading="lazy"><span class="lb">料金（税込）</span><h2>制作費0円。<br>かかるのは月々の運営費だけです。</h2></div>
       <div class="campaign rv">
         <span class="tag">サービス開始キャンペーン</span>
-        <h3>ライトプランが 月額 <b>7,800円</b>（税込）</h3>
-        <p>11月30日までのご相談・先着5社限定です。契約開始から12か月間この料金で、その後は通常料金（月額9,800円）に戻ります。最低契約6か月は通常どおりです。</p>
+        <h3>ライトプラン <s>月額9,800円</s> → 月額 <b>7,800円</b>（税込）</h3>
+        <p>11月30日までのご相談・先着5社限定です。契約開始から12か月間この料金で、12か月で24,000円お得になります。13か月目からは通常料金（月額9,800円）に戻ります。最低契約6か月は通常どおりです。</p>
       </div>
       <div class="plans rv">
-        <article class="plan">
+        <article class="plan rec">
+          <span class="badge">キャンペーン対象</span>
           <h3>ライトプラン</h3>
           <p class="for">まずはホームページを持ちたい方に</p>
           <div class="price"><b class="num">9,800</b><span>円 / 月</span></div>
           <p class="init">制作費 0円</p>
           <p class="camp">キャンペーン中は月額7,800円（先着5社・11月30日まで）</p>
           <ul>
+            <li><i class="ph ph-check"></i>ホームページ制作（スマホ対応・文章づくり込み）</li>
             <li><i class="ph ph-check"></i>公開・管理（サーバー・ドメイン・不具合の対応）</li>
             <li><i class="ph ph-check"></i>写真・料金・お知らせの更新代行（月5回まで）</li>
-            <li><i class="ph ph-check"></i>問い合わせフォーム・アクセスのご報告</li>
+            <li><i class="ph ph-check"></i>問い合わせ先の掲載・アクセスのご報告</li>
           </ul>
           <a class="btn" href="#apply">無料でサンプルを頼む<span class="arr"><i class="ph ph-arrow-right"></i></span></a>
         </article>
-        <article class="plan rec">
-          <span class="badge">おすすめ</span>
+        <article class="plan">
           <h3>スタンダードプラン</h3>
           <p class="for">仕事の手間も減らしたい方に</p>
           <div class="price"><b class="num">29,800</b><span>円 / 月</span></div>
@@ -574,10 +495,10 @@
         </article>
       </div>
       <div class="terms rv">
-        <div><b>契約は6か月から</b>ライトなら計58,800円。以降はいつでも解約できます</div>
+        <div><b>契約は6か月から</b>キャンペーン適用時は計46,800円（通常58,800円）。以降はいつでも解約できます</div>
         <div><b>プランはいつでも変更</b>ライトで始めて、あとから変えられます</div>
-        <div><b>ドメインはお店の名義</b>アドレスはお店のものです</div>
-        <div><b>契約まで費用0円</b>サンプルを見てご了承いただくまでかかりません</div>
+        <div><b>ドメインは御社の名義</b>アドレスは御社のものです</div>
+        <div><b>ご契約まで費用0円</b>サンプルを見て、ご契約いただくまでかかりません</div>
       </div>
       <div class="cmp rv">
         <table>
@@ -585,108 +506,93 @@
           <thead><tr><th scope="col"></th><th scope="col">制作費</th><th scope="col">月々</th></tr></thead>
           <tbody>
             <tr><th scope="row">制作会社</th><td>20〜50万円</td><td>5千〜2万円</td></tr>
-            <tr><th scope="row">AI コンサル</th><td>なし</td><td>10〜30万円</td></tr>
-            <tr class="me"><th scope="row">Kura Works</th><td>0円</td><td>9,800円〜（AI コンサル込みは 29,800円）</td></tr>
+            <tr class="me"><th scope="row">Kura Works</th><td>0円</td><td>9,800円〜（キャンペーン中は7,800円）</td></tr>
           </tbody>
         </table>
         <p class="src">※ 2026年10月時点の公開料金をもとにした当方調べの目安です。</p>
       </div>
+      <div class="center-cta rv"><a class="btn" href="#apply">無料でサンプルを頼む<span class="arr"><i class="ph ph-arrow-right"></i></span></a></div>
     </div>
   </section>
 
-  <!-- 8. AI コンサル -->
-  <section class="s b2" id="ai">
-    <div class="wrap ai">
-      <div class="rv">
-        <div class="sh" style="margin-bottom:0"><span class="lb">スタンダードプランの AI コンサル</span><h2>業務の流れをお聞きして、<br>AI で楽にできる所を<br>一緒に探します。</h2><p>現役のシステムエンジニアが、お店の仕事の流れをヒアリング。「ここは AI に任せられる」という所を一緒に考え、使い方までお手伝いします。データ分析や資料作成は、AI を使ってこちらで代行もできます。</p></div>
-        <ul>
-          <li><i class="ph ph-file-text"></i>見積書・請求書のひな形づくり</li>
-          <li><i class="ph ph-chat-text"></i>お客様への返信文の下書き</li>
-          <li><i class="ph ph-calendar"></i>予約・顧客管理を楽にする方法</li>
-          <li><i class="ph ph-lightbulb"></i>「こんな仕組みが欲しい」の相談</li>
-          <li><i class="ph ph-chart-bar"></i>売上や予約のデータ分析の代行</li>
-          <li><i class="ph ph-presentation-chart"></i>チラシ・説明資料づくりの代行</li>
-        </ul>
-        <p class="note">※ データ分析・資料作成の代行はプランに含まれます。システム開発などが必要な場合は、費用をご相談のうえで進めます。</p>
-      </div>
-      <div class="chat rv" aria-label="チャット相談のイメージ">
-        <img class="kp kp-chat" src="logo/kawasemi-geo/ai.svg" alt="" aria-hidden="true" loading="lazy">
-        <p class="cap">チャット相談のイメージ（例）</p>
-        <div class="bub shop"><small>お店から</small>予約の確認の返信を毎晩まとめて書いていて、30分くらいかかっています。</div>
-        <div class="bub you"><small>KURA から</small>よくある返信を5パターンにまとめて、AI で下書きを作れるようにしてみましょう。予約の内容を貼るだけで文が出るようにします。</div>
-        <div class="bub shop"><small>お店から</small>それなら私でもできそうです。</div>
-        <div class="bub you"><small>KURA から</small>使い方の手順もお送りしますね。うまくいかない所があれば、またチャットでどうぞ。</div>
-      </div>
-    </div>
-  </section>
-
-  <!-- 9. 流れ -->
-  <section class="s" id="flow">
-    <div class="wrap">
-      <div class="sh c rv"><span class="lb">始めるまでの流れ</span><h2>お店の情報を送るだけで、<br>あとはこちらで進めます。</h2></div>
-      <ol class="flow rv">
-        <li><span class="n">1</span><h3>お店の情報を送る</h3><p>Instagram の DM から、お店の名前と、Instagram や地図のページを教えてください。</p><span class="free">無料</span></li>
-        <li><span class="n">2</span><h3>サンプルをお届け</h3><p>実際に動くホームページを作って、URL をお送りします。スマホで見て確かめられます。</p><span class="free">無料</span></li>
-        <li><span class="n">3</span><h3>内容を打ち合わせ</h3><p>写真・文章・載せる内容をご相談しながら仕上げます。写真はお店のものに差し替えます。</p></li>
-        <li><span class="n">4</span><h3>公開・運営スタート</h3><p>ご了承いただいてから公開します。スタンダードは業務のヒアリングから始めます。</p></li>
-      </ol>
-    </div>
-  </section>
-
-  <!-- 10. 作っている人 -->
+  <!-- 6. 作っている人 -->
   <section class="s b2" id="about">
     <div class="wrap">
+      <div class="sh rv"><span class="lb">作っている人</span><h2>作っているのは、<br>藤沢の現役エンジニアです。</h2></div>
       <div class="maker rv">
         <div class="av" aria-hidden="true"><img src="logo/kawasemi-geo/kihon.svg" alt="" loading="lazy"></div>
         <div>
-          <h3>KURA</h3>
-          <p class="role">藤沢の現役システムエンジニア、デザイナー</p>
-          <p class="kp-name">イラストはマスコットの「エンジニアカワセミ」。AI を使いこなす、現役エンジニアのカワセミです。</p>
-          <p>「格安で、個人のお店や中小企業もホームページを持てるように」と、個人で取り組んでいます。会社ではなく個人なので、制作費をいただかず、月々の費用も抑えられます。</p>
+          <h3>矢倉 宏之<span class="kana">やくら ひろし</span></h3>
+          <p class="role">藤沢市在住・現役システムエンジニア</p>
+          <p class="kp-name">イラストはマスコットの「エンジニアカワセミ」です。</p>
+          <p>Kura Worksは、始めたばかりの個人のサービスです。正直に言うと、導入実績はまだありません。だからこそ、先に作ってお見せして、納得していただけた場合だけお願いする形にしています。最初の5社を月額7,800円にしているのも、そのためです。</p>
+          <p>個人で運営していて営業担当も事務所もないので、制作費をいただかずに続けられます。無理のない費用で、小さな会社やお店もホームページを持てるように。窓口も、作るのも、更新するのも、すべて矢倉本人です。</p>
+          <ul class="pledge">
+            <li class="ph-t">お約束</li>
+            <li><i class="ph ph-check-circle"></i>ご契約まで、費用は一切いただきません</li>
+            <li><i class="ph ph-check-circle"></i>サンプルを見てお断りいただいた場合、それ以上しつこくご連絡しません</li>
+            <li><i class="ph ph-check-circle"></i>サンプルは御社にだけURLでお見せし、了承なく公開しません</li>
+            <li><i class="ph ph-check-circle"></i>ドメインは御社の名義で取得します</li>
+          </ul>
         </div>
       </div>
     </div>
   </section>
 
-  <!-- 11. よくある質問 -->
+  <!-- 7. よくある質問 -->
   <section class="s" id="faq">
     <div class="wrap faq-wrap">
-      <div class="sh rv"><span class="lb">よくある質問</span><h2>はじめての方から、<br>よく聞かれること</h2><p>ほかに気になることは、下のフォームからお気軽にどうぞ。</p><img class="kp kp-faq" src="logo/kawasemi-geo/kangaeru.svg" alt="" aria-hidden="true" loading="lazy"></div>
+      <div class="sh rv"><span class="lb">よくある質問</span><h2>はじめての方から、<br>よく聞かれること</h2><p>ほかに気になることは、InstagramのDMからお気軽にどうぞ。</p><img class="kp kp-faq" src="logo/kawasemi-geo/kangaeru.svg" alt="" aria-hidden="true" loading="lazy"></div>
       <dl class="faq rv">
         <div><dt><span>Q</span>本当に制作費は0円ですか。</dt><dd>はい。ホームページを作る費用はいただきません。かかるのは公開後の月々の運営費（ライト月9,800円、スタンダード月29,800円、税込）だけです。</dd></div>
-        <div><dt><span>Q</span>サンプルを頼んだら、断れなくなりませんか。</dt><dd>サンプル作成は無料で、見ていただいたうえでお断りいただいてもかまいません。ご了承いただくまで、費用は一切かかりません。</dd></div>
-        <div><dt><span>Q</span>契約期間と解約について教えてください。</dt><dd>ご契約は6か月からです（ライトなら計58,800円）。それ以降はいつでも解約できます。</dd></div>
+        <div><dt><span>Q</span>実績はありますか。</dt><dd>始めたばかりで、導入実績はまだありません。そのため、先に御社専用のサンプルを無料で作り、見て判断していただく形にしています。</dd></div>
+        <div><dt><span>Q</span>サンプルを頼んだら、断れなくなりませんか。</dt><dd>サンプル作成は無料で、見ていただいたうえでお断りいただいてもかまいません。ご契約いただくまで、費用は一切かかりません。</dd></div>
+        <div><dt><span>Q</span>サンプルを断ったら、営業の連絡が続きませんか。</dt><dd>続きません。「今回は見送ります」とひと言いただければ、それ以降こちらからご連絡しません。</dd></div>
+        <div><dt><span>Q</span>契約期間と解約について教えてください。</dt><dd>ご契約は6か月からです（ライトはキャンペーン適用時で計46,800円、通常は計58,800円）。それ以降はいつでも解約できます。</dd></div>
         <div><dt><span>Q</span>あとからプランを変えられますか。</dt><dd>はい、いつでも変更できます。ライトで始めて、必要になったらスタンダードに変えることもできます。</dd></div>
-        <div><dt><span>Q</span>ホームページのアドレス（ドメイン）は誰のものですか。</dt><dd>お店の名義で取得します。アドレスはお店のものです。</dd></div>
-        <div><dt><span>Q</span>写真や文章は自分で用意する必要がありますか。</dt><dd>最初のサンプルは、Instagram や地図に出ている情報をもとにこちらで作ります。公開前に、お店の写真や確認した文章に差し替えます。</dd></div>
-        <div><dt><span>Q</span>AI コンサルでは何をしてもらえますか。</dt><dd>お店の業務の流れをお聞きして、AI で楽にできる所を一緒に考えます。チャットで相談し放題で、AI を使ったデータ分析や資料作成の代行もお任せいただけます。</dd></div>
+        <div><dt><span>Q</span>ホームページのアドレス（ドメイン）は誰のものですか。</dt><dd>御社の名義で取得します。アドレスは御社のものです。</dd></div>
+        <div><dt><span>Q</span>写真や文章は自分で用意する必要がありますか。</dt><dd>最初のサンプルは、InstagramやGoogleマップに出ている情報をもとにこちらで作ります。公開前に、御社の写真や確認した文章に差し替えます。</dd></div>
+        <div><dt><span>Q</span>お店ではなく、塗装や造園などの会社でも頼めますか。</dt><dd>はい。施工事例・対応エリア・お見積りの問い合わせ先を中心にしたページをお作りします。</dd></div>
+        <div><dt><span>Q</span>AI コンサルでは何をしてもらえますか。</dt><dd>お店や会社の業務の流れをお聞きして、AIで楽にできる所を一緒に考えます。チャットで相談し放題で、AIを使ったデータ分析や資料作成の代行もお任せいただけます（スタンダードプラン）。</dd></div>
         <div><dt><span>Q</span>予約システムなどの開発も頼めますか。</dt><dd>データ分析・資料作成の代行はスタンダードプランに含まれます。システム開発などが必要な場合は、費用をご相談のうえで進めます。</dd></div>
       </dl>
     </div>
   </section>
 
-  <!-- 12. 最後の申し込み（TOP と同じ） -->
-  <section class="s b2" id="apply">
+  <!-- 8. AI コンサル（縮小） -->
+  <section class="s b2" id="ai">
+    <div class="wrap">
+      <div class="sh rv"><span class="lb">スタンダードプランの AI コンサル</span><h2>仕事の手間も、<br>減らしたい方へ。</h2><p>現役のシステムエンジニアが、仕事の流れをお聞きして、「ここはAIに任せられる」という所を一緒に考え、使い方までお手伝いします。ホームページとあわせて頼みたい方のための、追加のプランです。</p></div>
+      <ul class="ai-list rv">
+        <li><i class="ph ph-file-text"></i>見積書・請求書のひな形づくり</li>
+        <li><i class="ph ph-chat-text"></i>お客様への返信文の下書き</li>
+        <li><i class="ph ph-chart-bar"></i>データ分析・資料作成の代行</li>
+      </ul>
+      <p class="ai-note rv">※ データ分析・資料作成の代行はスタンダードプランに含まれます。システム開発などが必要な場合は、費用をご相談のうえで進めます。</p>
+    </div>
+  </section>
+
+  <!-- 9. 最後の申し込み -->
+  <section class="s" id="apply">
     <div class="wrap">
       <div class="cta-box rv">
         <div>
           <img class="kp kp-apply" src="logo/kawasemi-geo/ojigi.svg" alt="" aria-hidden="true" loading="lazy">
-          <h2>まずは、あなたのお店の<br>ホームページを無料で<br>作ってみませんか。</h2>
-          <p class="lead">お店の名前と、Instagram や地図のページを教えていただければ、サンプルを作ってお送りします。</p>
+          <h2>まずは無料で、<br>御社のホームページを<br>作らせてください。</h2>
+          <p class="lead">見てから決めていただく形です。合わなければ、その時点でお断りいただいて大丈夫です。</p>
           <ul>
             <li><i class="ph ph-check-circle"></i>サンプル作成は無料</li>
-            <li><i class="ph ph-check-circle"></i>ご了承いただくまで費用は一切かかりません</li>
-            <li><i class="ph ph-check-circle"></i>見てからお断りいただいてもかまいません</li>
+            <li><i class="ph ph-check-circle"></i>ご契約まで費用0円</li>
+            <li><i class="ph ph-check-circle"></i>見てからお断りOK</li>
           </ul>
         </div>
         <div class="contact-choice">
           <p class="contact-label">Kura Works のご相談窓口</p>
-          <h3>InstagramのDMから、<br>気軽にご相談ください。</h3>
-          <p>「サンプルを見た」とひと言で大丈夫です。お店のお名前と、載せたいことをお聞かせください。</p>
-          <a class="btn" href="https://www.instagram.com/hiroshi_5151/" target="_blank" rel="noopener noreferrer">Instagramで相談する<span class="arr"><i class="ph ph-arrow-up-right"></i></span></a>
-          <p class="contact-id">@hiroshi_5151</p>
-          <ol><li>お店・会社のお名前</li><li>Instagram・地図・今のサイトのURL（分かれば）</li><li>困っていること、載せたい内容</li></ol>
-          <p class="contact-note">ご質問だけでも大丈夫です。<br>ご契約前の費用はかかりません。</p>
+          <h3>Instagramで「サンプル希望」と<br>送るだけで大丈夫です。</h3>
+          <p>すでにこちらからDMが届いている方は、そのDMに返信してください。屋号やInstagramのページはこちらで確認しますので、ご用意いただくものはありません。</p>
+          <a class="btn" href="https://www.instagram.com/hiroshi_5151/" target="_blank" rel="noopener noreferrer">無料でサンプルを頼む<span class="arr"><i class="ph ph-arrow-up-right"></i></span></a>
+          <p class="contact-id">@hiroshi_5151（Kura Works 矢倉）</p>
+          <p class="contact-note">ご質問だけでも歓迎です。<br>ご契約前の費用はかかりません。</p>
         </div>
       </div>
     </div>
@@ -697,12 +603,12 @@
   <svg class="enoshima" viewBox="0 0 400 48" preserveAspectRatio="xMidYMax meet" aria-hidden="true"><path d="M0 40q25-8 50 0t50 0 50 0 50 0 50 0 50 0 50 0 50 0" fill="none" stroke="#4C7DFF" stroke-width="1.5" opacity=".5"/><path d="M168 40q14-30 30-18 8-12 16 2 14 0 14 16" fill="none" stroke="#2447B8" stroke-width="1.8" stroke-linejoin="round"/><path d="M196 24V10" stroke="#2447B8" stroke-width="1.8" stroke-linecap="round"/><rect x="192.5" y="5" width="7" height="5" rx="1.5" fill="none" stroke="#2447B8" stroke-width="1.6"/></svg>
   <div class="wrap">
     <a class="logo" href="#top"><img class="mk" src="logo/mark.svg" alt="" width="32" height="32"><span class="wm">Kura<b>Works</b></span></a>
-    <span>藤沢の現役システムエンジニア、デザイナー KURA</span>
+    <span>藤沢の現役システムエンジニア 矢倉 宏之</span>
   </div>
 </footer>
 
 <div class="mbar" id="mbar" aria-hidden="true">
-  <span class="t"><b>制作費0円</b>サンプル作成は無料</span>
+  <span class="t"><b>制作費0円・月7,800円（先着5社）</b>サンプル作成は無料</span>
   <a class="btn sm" href="#apply" tabindex="-1">無料でサンプルを頼む</a>
 </div>
 
@@ -718,21 +624,9 @@
   links.forEach(function (a) { a.addEventListener('click', function () { setOpen(false); }); });
   document.addEventListener('keydown', function (e) { if (e.key === 'Escape') setOpen(false); });
 
-  // 動きを減らす設定なら動画を止める
-  var reduce = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
-  document.querySelectorAll('video').forEach(function (v) { v.muted = true; if (reduce) { v.removeAttribute('autoplay'); v.pause(); } else { var p = v.play(); if (p && p.catch) p.catch(function () {}); } });
-
   // スクロールで現れる（1回だけ）
   var io = new IntersectionObserver(function (es) { es.forEach(function (e) { if (e.isIntersecting) { e.target.classList.add('in'); io.unobserve(e.target); } }); }, { rootMargin: '0px 0px -10% 0px' });
   document.querySelectorAll('.rv').forEach(function (el) { io.observe(el); });
-
-  // 理念の一文：区切りごとに濃くする
-  var tg = document.getElementById('tagline');
-  var parts = [['格安で、', 'br'], ['個人の'], ['お店や'], ['中小企業も、', 'br'], ['ホームページを', 'ac'], ['持てるように。', 'ac']];
-  tg.textContent = '';
-  parts.forEach(function (p) { var s = document.createElement('span'); s.className = 'w' + (p[1] === 'ac' ? ' ac' : ''); s.textContent = p[0]; tg.appendChild(s); if (p[1] === 'br') tg.appendChild(document.createElement('br')); });
-  var wio = new IntersectionObserver(function (es) { es.forEach(function (e) { if (e.isIntersecting) { e.target.classList.add('lit'); wio.unobserve(e.target); } }); }, { rootMargin: '0px 0px -40% 0px' });
-  tg.querySelectorAll('.w').forEach(function (w) { wio.observe(w); });
 
   // ナビ：上の帯を過ぎたら上に寄せる。今見ている場所を表示。スマホの申し込みバー
   var nav = document.getElementById('nav'), mbar = document.getElementById('mbar');
@@ -744,7 +638,7 @@
   applyIo.observe(document.getElementById('apply'));
   var navLinks = document.querySelectorAll('.nav ul a');
   var sio = new IntersectionObserver(function (es) { es.forEach(function (e) { if (!e.isIntersecting) return; navLinks.forEach(function (a) { a.classList.toggle('on', a.getAttribute('href') === '#' + e.target.id); }); }); }, { rootMargin: '-45% 0px -50% 0px' });
-  ['why', 'price', 'ai', 'flow', 'faq'].forEach(function (id) { sio.observe(document.getElementById(id)); });
+  ['flow', 'price', 'about', 'faq'].forEach(function (id) { sio.observe(document.getElementById(id)); });
 
 
 })();
