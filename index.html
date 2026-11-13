@@ -173,22 +173,6 @@
   @media (max-width: 900px) { .s { padding: 64px 0; } .sh { margin-bottom: 32px; } .sh h2 { font-size: 24px; line-height: 1.5; } }
   .center-cta { text-align: center; margin-top: 40px; }
 
-  /* サイトの例 */
-  .ex3 { display: grid; grid-template-columns: minmax(0, auto) minmax(0, 340px); gap: 48px; align-items: center; justify-content: center; }
-  .ex-phones { display: flex; gap: 20px; justify-content: center; align-items: flex-start; }
-  .ex-phones figure { margin: 0; }
-  .ex-phone { width: 262px; max-width: 42vw; border: 10px solid var(--deep); border-radius: 40px; overflow: hidden; background: var(--deep); box-shadow: 0 32px 56px -32px rgba(15, 27, 45, .45); }
-  .ex-phone img { display: block; width: 100%; aspect-ratio: 9 / 16; object-fit: cover; object-position: top; }
-  .ex-phones figcaption { display: flex; align-items: center; justify-content: center; gap: 8px; margin-top: 16px; font-size: 13px; line-height: 20px; color: var(--muted); }
-  .ex-phones figcaption b { color: var(--ink); font-size: 15px; }
-  .ex-phones figcaption span { white-space: nowrap; background: var(--accent-soft); color: var(--accent); font-weight: 700; font-size: 12px; line-height: 16px; padding: 4px 10px; border-radius: 9999px; }
-  .ex-points { margin: 0; padding: 0; list-style: none; display: grid; gap: 24px; }
-  .ex-points li { display: grid; grid-template-columns: 28px 1fr; gap: 12px; }
-  .ex-points i { color: var(--accent); font-size: 24px; line-height: 28px; }
-  .ex-points b { display: block; font-size: 16px; line-height: 24px; }
-  .ex-points p { margin-top: 4px; font-size: 14px; line-height: 22px; color: var(--muted); }
-  @media (max-width: 900px) { .ex3 { grid-template-columns: 1fr; gap: 32px; } .ex-phone { width: min(200px, 42vw); border-width: 8px; border-radius: 32px; } }
-
   /* 悩み → 解決 */
   .ps { display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1fr); gap: 16px; }
   .ps .col { border-radius: 24px; padding: 40px; }
@@ -361,7 +345,6 @@
   <nav class="nav" id="nav" aria-label="メインメニュー">
     <a class="logo" href="#top" aria-label="Kura Works トップへ"><img class="mk" src="logo/mark.svg" alt="" width="32" height="32"><span class="wm">Kura<b>Works</b></span></a>
     <ul>
-      <li><a href="#examples">サイトの例</a></li>
       <li><a href="#flow">流れ</a></li>
       <li><a href="#price">料金</a></li>
       <li><a href="#about">作っている人</a></li>
@@ -371,7 +354,6 @@
     <button class="menu-btn" type="button" aria-label="メニューを開く" aria-expanded="false" aria-controls="panel"><span></span><span></span></button>
   </nav>
   <div class="panel" id="panel">
-    <a href="#examples">サイトの例</a>
     <a href="#flow">始めるまでの流れ</a>
     <a href="#price">料金</a>
     <a href="#about">作っている人</a>
@@ -431,25 +413,6 @@
       <li><b class="num">6<small>か月〜</small></b><span>最低契約期間（サイト公開月から数えます）。以降はいつでも解約できます</span></li>
     </ul>
   </div>
-
-  <!-- 3. サイトの例 -->
-  <section class="s" id="examples">
-    <div class="wrap">
-      <div class="sh c rv"><span class="lb">サイトの例</span><h2>こんな1ページを<br>お作りします。</h2><p>施工事例・対応エリア・問い合わせ先を、スマホで見やすい1ページにまとめます。下は提案用に作ったサンプルです（導入実績ではありません）。御社の場合どうなるかは、無料のサンプルでお見せします。</p></div>
-      <div class="ex3 rv">
-        <div class="ex-phones">
-          <figure><div class="ex-phone"><img src="samples/sample-01.jpg" alt="造園会社のサンプルページ（スマホ表示）" loading="lazy"></div><figcaption><b>サンプル｜造園</b><span>藤沢市</span></figcaption></figure>
-          <figure><div class="ex-phone"><img src="samples/sample-06.jpg" alt="工務店のサンプルページ（スマホ表示）" loading="lazy"></div><figcaption><b>サンプル｜工務店</b><span>平塚市</span></figcaption></figure>
-        </div>
-        <ul class="ex-points">
-          <li><i class="ph ph-images"></i><div><b>施工事例</b><p>仕事の写真と内容を、まとめて見せられます。</p></div></li>
-          <li><i class="ph ph-map-pin"></i><div><b>対応エリア</b><p>拠点と対応エリアが分かり、近くの方に見つけてもらえます。</p></div></li>
-          <li><i class="ph ph-phone"></i><div><b>問い合わせボタン</b><p>御社のお客様が、そのまま御社に電話やLINEで相談できます。</p></div></li>
-        </ul>
-      </div>
-      <div class="center-cta rv"><a class="btn" href="https://ig.me/m/hiroshi_5151" target="_blank" rel="noopener noreferrer">無料でサンプルを頼む<span class="arr"><i class="ph ph-arrow-up-right"></i></span></a></div>
-    </div>
-  </section>
 
   <!-- 4. 悩み → 解決 -->
   <section class="s">
@@ -681,7 +644,7 @@
   applyIo.observe(document.getElementById('apply'));
   var navLinks = document.querySelectorAll('.nav ul a');
   var sio = new IntersectionObserver(function (es) { es.forEach(function (e) { if (!e.isIntersecting) return; navLinks.forEach(function (a) { a.classList.toggle('on', a.getAttribute('href') === '#' + e.target.id); }); }); }, { rootMargin: '-45% 0px -50% 0px' });
-  ['examples', 'flow', 'price', 'about', 'faq'].forEach(function (id) { sio.observe(document.getElementById(id)); });
+  ['flow', 'price', 'about', 'faq'].forEach(function (id) { sio.observe(document.getElementById(id)); });
 
 
 })();
