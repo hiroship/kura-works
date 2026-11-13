@@ -174,15 +174,20 @@
   .center-cta { text-align: center; margin-top: 40px; }
 
   /* サイトの例 */
-  .ex2 { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 16px; }
-  .ex2 figure { margin: 0; border-radius: 24px; background: var(--card); border: 1px solid var(--line); overflow: hidden; transition: transform 500ms var(--curve); }
-  .ex2 figure:hover { transform: translateY(-4px); }
-  .ex2 img { width: 100%; aspect-ratio: 3 / 4; object-fit: cover; object-position: top; }
-  .ex2 figcaption { display: flex; align-items: center; justify-content: space-between; gap: 8px; padding: 16px 20px; font-size: 13px; line-height: 20px; color: var(--muted); }
-  .ex2 figcaption b { color: var(--ink); font-size: 15px; }
-  .ex2 figcaption span { white-space: nowrap; background: var(--accent-soft); color: var(--accent); font-weight: 700; font-size: 12px; line-height: 16px; padding: 4px 10px; border-radius: 9999px; }
-  .ex-note { margin-top: 24px; font-size: 13px; line-height: 20px; color: var(--muted); text-align: center; }
-  @media (max-width: 900px) { .ex2 { grid-template-columns: 1fr 1fr; gap: 8px; } .ex2 figcaption { padding: 12px 16px; } }
+  .ex3 { display: grid; grid-template-columns: minmax(0, auto) minmax(0, 340px); gap: 48px; align-items: center; justify-content: center; }
+  .ex-phones { display: flex; gap: 20px; justify-content: center; align-items: flex-start; }
+  .ex-phones figure { margin: 0; }
+  .ex-phone { width: 262px; max-width: 42vw; border: 10px solid var(--deep); border-radius: 40px; overflow: hidden; background: var(--deep); box-shadow: 0 32px 56px -32px rgba(15, 27, 45, .45); }
+  .ex-phone img { display: block; width: 100%; aspect-ratio: 9 / 16; object-fit: cover; object-position: top; }
+  .ex-phones figcaption { display: flex; align-items: center; justify-content: center; gap: 8px; margin-top: 16px; font-size: 13px; line-height: 20px; color: var(--muted); }
+  .ex-phones figcaption b { color: var(--ink); font-size: 15px; }
+  .ex-phones figcaption span { white-space: nowrap; background: var(--accent-soft); color: var(--accent); font-weight: 700; font-size: 12px; line-height: 16px; padding: 4px 10px; border-radius: 9999px; }
+  .ex-points { margin: 0; padding: 0; list-style: none; display: grid; gap: 24px; }
+  .ex-points li { display: grid; grid-template-columns: 28px 1fr; gap: 12px; }
+  .ex-points i { color: var(--accent); font-size: 24px; line-height: 28px; }
+  .ex-points b { display: block; font-size: 16px; line-height: 24px; }
+  .ex-points p { margin-top: 4px; font-size: 14px; line-height: 22px; color: var(--muted); }
+  @media (max-width: 900px) { .ex3 { grid-template-columns: 1fr; gap: 32px; } .ex-phone { width: min(200px, 42vw); border-width: 8px; border-radius: 32px; } }
 
   /* 悩み → 解決 */
   .ps { display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1fr); gap: 16px; }
@@ -429,16 +434,19 @@
   <!-- 3. サイトの例 -->
   <section class="s" id="examples">
     <div class="wrap">
-      <div class="sh c rv"><span class="lb">サイトの例</span><h2>こんなホームページを<br>お作りします。</h2><p>施工事例・対応エリア・問い合わせ先を、スマホで見やすい1ページにまとめます。まずは御社専用のサンプルを無料で作ってお見せします。以下は導入実績ではなく、提案用に作成したサンプルの例です。</p></div>
-      <div class="ex2 rv">
-        <figure><img src="samples/sample-01.jpg" alt="造園会社のサンプルページ（スマホ表示）" loading="lazy"><figcaption><b>サンプル｜造園</b><span>藤沢市</span></figcaption></figure>
-        <figure><img src="samples/sample-02.jpg" alt="造園会社のサンプルページ（スマホ表示）" loading="lazy"><figcaption><b>サンプル｜造園</b><span>茅ヶ崎市</span></figcaption></figure>
-        <figure><img src="samples/sample-03.jpg" alt="塗装会社のサンプルページ（スマホ表示）" loading="lazy"><figcaption><b>サンプル｜塗装</b><span>平塚市</span></figcaption></figure>
-        <figure><img src="samples/sample-04.jpg" alt="工務店のサンプルページ（スマホ表示）" loading="lazy"><figcaption><b>サンプル｜工務店</b><span>藤沢市</span></figcaption></figure>
-        <figure><img src="samples/sample-05.jpg" alt="リフォーム会社のサンプルページ（スマホ表示）" loading="lazy"><figcaption><b>サンプル｜リフォーム</b><span>茅ヶ崎市</span></figcaption></figure>
-        <figure><img src="samples/sample-06.jpg" alt="工務店のサンプルページ（スマホ表示）" loading="lazy"><figcaption><b>サンプル｜工務店</b><span>平塚市</span></figcaption></figure>
+      <div class="sh c rv"><span class="lb">サイトの例</span><h2>こんな1ページを<br>お作りします。</h2><p>施工事例・対応エリア・問い合わせ先を、スマホで見やすい1ページにまとめます。下は提案用に作ったサンプルです（導入実績ではありません）。御社の場合どうなるかは、無料のサンプルでお見せします。</p></div>
+      <div class="ex3 rv">
+        <div class="ex-phones">
+          <figure><div class="ex-phone"><img src="samples/sample-01.jpg" alt="造園会社のサンプルページ（スマホ表示）" loading="lazy"></div><figcaption><b>サンプル｜造園</b><span>藤沢市</span></figcaption></figure>
+          <figure><div class="ex-phone"><img src="samples/sample-06.jpg" alt="工務店のサンプルページ（スマホ表示）" loading="lazy"></div><figcaption><b>サンプル｜工務店</b><span>平塚市</span></figcaption></figure>
+        </div>
+        <ul class="ex-points">
+          <li><i class="ph ph-images"></i><div><b>施工事例</b><p>仕事の写真と内容を、まとめて見せられます。</p></div></li>
+          <li><i class="ph ph-map-pin"></i><div><b>対応エリア</b><p>拠点と対応エリアが分かり、近くの方に見つけてもらえます。</p></div></li>
+          <li><i class="ph ph-phone"></i><div><b>問い合わせボタン</b><p>見た方が、そのまま電話やLINEで相談できます。</p></div></li>
+        </ul>
       </div>
-      <p class="ex-note rv">※ 提案用に作成したサンプルページの例です（会社名などは伏せています）。導入実績ではありません。</p>
+      <div class="center-cta rv"><a class="btn" href="https://ig.me/m/hiroshi_5151" target="_blank" rel="noopener noreferrer">御社専用のサンプルを無料で依頼する<span class="arr"><i class="ph ph-arrow-up-right"></i></span></a></div>
     </div>
   </section>
 
@@ -557,9 +565,9 @@
           <h3>矢倉<span class="kana">やくら</span></h3>
           <p class="role">藤沢市在住・現役システムエンジニア</p>
           <p class="kp-name">イラストはマスコットの「エンジニアカワセミ」です。</p>
-          <p>Kura Worksは、始めたばかりの個人のサービスです。正直に言うと、導入実績はまだありません。だからこそ、先に作ってお見せして、納得していただけた場合だけお願いする形にしています。最初の5社を12か月間 月額7,800円にしているのも、そのためです。</p>
+          <p>Kura Worksは、個人で運営しているホームページ制作サービスです。ご相談から制作まで、同じ一人が担当します。まず御社専用のサンプルを無料で作り、見て納得していただけた場合だけお願いする形にしています。新しいサービスで導入実績はこれからのため、最初の5社は12か月間 月額7,800円でお受けします。</p>
           <p>普段はシステムエンジニアとして、業務システムの開発に携わっています。その技術を、地域の会社やお店のために使いたくて始めたサービスです。</p>
-          <p>個人で運営していて営業担当も事務所もないので、制作費をいただかずに続けられます。無理のない費用で、小さな会社やお店もホームページを持てるように。窓口も、作るのも、更新するのも、すべて矢倉本人です。</p>
+          <p>営業担当も事務所もないので、制作費をいただかずに続けられます。無理のない費用で、小さな会社やお店もホームページを持てるように。</p>
           <ul class="pledge">
             <li class="ph-t">お約束</li>
             <li><i class="ph ph-check-circle"></i>ご契約まで、費用は一切いただきません</li>
@@ -578,7 +586,7 @@
       <div class="sh rv"><span class="lb">よくある質問</span><h2>はじめての方から、<br>よく聞かれること</h2><p>ほかに気になることは、InstagramのDMからお気軽にどうぞ。</p><img class="kp kp-faq" src="logo/kawasemi-geo/kangaeru.svg" alt="" aria-hidden="true" loading="lazy"></div>
       <dl class="faq rv">
         <div><dt><span>Q</span>本当に制作費は0円ですか。</dt><dd>はい。ホームページを作る費用はいただきません。かかるのは公開後の月々の運営費（ライト月9,800円、スタンダード月29,800円、税込）だけです。</dd></div>
-        <div><dt><span>Q</span>実績はありますか。</dt><dd>始めたばかりで、導入実績はまだありません。そのため、先に御社専用のサンプルを無料で作り、見て判断していただく形にしています。</dd></div>
+        <div><dt><span>Q</span>実績はありますか。</dt><dd>新しいサービスのため、導入実績はまだありません。その代わり、ご契約前に御社専用のサンプルを無料でお作りします。実物を見てから判断でき、お断りいただいた場合はこちらから連絡しません。</dd></div>
         <div><dt><span>Q</span>サンプルを頼んだら、断れなくなりませんか。</dt><dd>サンプル作成は無料で、見ていただいたうえでお断りいただいてもかまいません。ご契約いただくまで、費用は一切かかりません。</dd></div>
         <div><dt><span>Q</span>サンプルを断ったら、営業の連絡が続きませんか。</dt><dd>続きません。「今回は見送ります」とひと言いただければ、それ以降こちらからご連絡しません。</dd></div>
         <div><dt><span>Q</span>契約期間と解約について教えてください。</dt><dd>ご契約は6か月からです（ライトはキャンペーン適用時で計46,800円、通常は計58,800円。スタンダードは計178,800円）。それ以降はいつでも解約できます。</dd></div>
