@@ -239,6 +239,12 @@
   .plan .price b { font-size: 48px; line-height: 1; color: var(--ink); letter-spacing: -0.03em; }
   .plan .price span { font-size: 14px; line-height: 20px; color: var(--muted); }
   .plan .init { margin-top: 8px; font-size: 14px; line-height: 20px; color: var(--accent); font-weight: 700; }
+  .plan .camp { margin-top: 8px; font-size: 14px; line-height: 20px; color: var(--ink); font-weight: 700; background: var(--accent-soft); border-radius: 8px; padding: 8px 12px; }
+  .campaign { margin-bottom: 24px; border-radius: 24px; background: var(--accent); color: #fff; padding: 28px 32px; }
+  .campaign .tag { display: inline-block; font-size: 12px; line-height: 16px; font-weight: 700; background: #fff; color: var(--accent); padding: 4px 12px; border-radius: 9999px; margin-bottom: 12px; }
+  .campaign h3 { font-size: 22px; line-height: 30px; }
+  .campaign h3 b { font-size: 30px; }
+  .campaign p { margin-top: 8px; font-size: 14px; line-height: 22px; opacity: .92; }
   .plan ul { margin: 24px 0 32px; padding: 24px 0 0; list-style: none; display: grid; gap: 12px; border-top: 1px solid var(--line); }
   .plan li { display: grid; grid-template-columns: 24px 1fr; gap: 8px; font-size: 15px; line-height: 24px; }
   .plan li i { color: var(--accent); font-size: 20px; line-height: 24px; }
@@ -533,12 +539,18 @@
   <section class="s" id="price">
     <div class="wrap">
       <div class="sh c rv kp-wrap"><img class="kp kp-side" src="logo/kawasemi-geo/yubisashi.svg" alt="" aria-hidden="true" loading="lazy"><span class="lb">料金（税込）</span><h2>制作費0円。<br>かかるのは月々の運営費だけです。</h2></div>
+      <div class="campaign rv">
+        <span class="tag">サービス開始キャンペーン</span>
+        <h3>ライトプランが 月額 <b>7,800円</b>（税込）</h3>
+        <p>11月30日までのご相談・先着5社限定です。契約開始から12か月間この料金で、その後は通常料金（月額9,800円）に戻ります。最低契約6か月は通常どおりです。</p>
+      </div>
       <div class="plans rv">
         <article class="plan">
           <h3>ライトプラン</h3>
           <p class="for">まずはホームページを持ちたい方に</p>
           <div class="price"><b class="num">9,800</b><span>円 / 月</span></div>
           <p class="init">制作費 0円</p>
+          <p class="camp">キャンペーン中は月額7,800円（先着5社・11月30日まで）</p>
           <ul>
             <li><i class="ph ph-check"></i>公開・管理（サーバー・ドメイン・不具合の対応）</li>
             <li><i class="ph ph-check"></i>写真・料金・お知らせの更新代行（月5回まで）</li>
