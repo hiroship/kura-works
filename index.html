@@ -173,6 +173,17 @@
   @media (max-width: 900px) { .s { padding: 64px 0; } .sh { margin-bottom: 32px; } .sh h2 { font-size: 24px; line-height: 1.5; } }
   .center-cta { text-align: center; margin-top: 40px; }
 
+  /* サイトの例 */
+  .ex2 { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 16px; }
+  .ex2 figure { margin: 0; border-radius: 24px; background: var(--card); border: 1px solid var(--line); overflow: hidden; transition: transform 500ms var(--curve); }
+  .ex2 figure:hover { transform: translateY(-4px); }
+  .ex2 img { width: 100%; aspect-ratio: 3 / 4; object-fit: cover; object-position: top; }
+  .ex2 figcaption { display: flex; align-items: center; justify-content: space-between; gap: 8px; padding: 16px 20px; font-size: 13px; line-height: 20px; color: var(--muted); }
+  .ex2 figcaption b { color: var(--ink); font-size: 15px; }
+  .ex2 figcaption span { white-space: nowrap; background: var(--accent-soft); color: var(--accent); font-weight: 700; font-size: 12px; line-height: 16px; padding: 4px 10px; border-radius: 9999px; }
+  .ex-note { margin-top: 24px; font-size: 13px; line-height: 20px; color: var(--muted); text-align: center; }
+  @media (max-width: 900px) { .ex2 { grid-template-columns: 1fr 1fr; gap: 8px; } .ex2 figcaption { padding: 12px 16px; } }
+
   /* 悩み → 解決 */
   .ps { display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1fr); gap: 16px; }
   .ps .col { border-radius: 24px; padding: 40px; }
@@ -383,7 +394,7 @@
       <div class="devices rv" aria-label="作るホームページのイメージ">
         <img class="kp kp-hero" src="logo/kawasemi-geo/tewofuru.svg" alt="" aria-hidden="true">
         <div class="browser">
-          <div class="bar" aria-hidden="true"><i></i><i></i><i></i><span>aozora-tosou.jp</span></div>
+          <div class="bar" aria-hidden="true"><i></i><i></i><i></i><span>aozora-tosou.example.jp</span></div>
           <div class="site" aria-hidden="true">
             <div class="s-nav"><b>あおぞら塗装</b><span>施工事例</span><span>対応エリア</span><span>料金の目安</span><em>お見積り・ご相談</em></div>
             <div class="s-hero">
@@ -397,7 +408,7 @@
           <div class="p-site"><b>あおぞら塗装</b><div class="s-ph"><i class="ph ph-paint-roller"></i></div><strong>塗り替えで、家を長持ち。</strong><em>お見積り・ご相談</em><span class="ln"></span><span class="ln short"></span></div>
         </div>
         <div class="float f1" aria-hidden="true"><i class="ph ph-check-circle"></i><span><b>施工事例を追加しました</b>公開後の更新もおまかせ</span></div>
-        <div class="float f2" aria-hidden="true"><i class="ph ph-currency-jpy"></i><span><b>制作費 0円</b>キャンペーン中 月7,800円</span></div>
+        <div class="float f2" aria-hidden="true"><i class="ph ph-currency-jpy"></i><span><b>制作費 0円</b>先着5社は 月7,800円</span></div>
         <p class="mock-note">画面は架空の会社のイメージです</p>
       </div>
     </div>
@@ -413,7 +424,23 @@
     </ul>
   </div>
 
-  <!-- 3. 悩み → 解決 -->
+  <!-- 3. サイトの例 -->
+  <section class="s" id="examples">
+    <div class="wrap">
+      <div class="sh c rv"><span class="lb">サイトの例</span><h2>こんなホームページを<br>お作りします。</h2><p>制作費0円で、まずは御社専用のサンプルを作ってお見せします。キャンペーン中は、先着5社が12か月間 月額7,800円（税込）です。</p></div>
+      <div class="ex2 rv">
+        <figure><img src="samples/sample-chill.jpg" alt="造園会社のサンプルページ（スマホ表示）" loading="lazy"><figcaption><b>造園・植木屋</b><span>藤沢市</span></figcaption></figure>
+        <figure><img src="samples/sample-daikichi.jpg" alt="造園会社のサンプルページ（スマホ表示）" loading="lazy"><figcaption><b>造園</b><span>茅ヶ崎市</span></figcaption></figure>
+        <figure><img src="samples/sample-kurumi.jpg" alt="塗装会社のサンプルページ（スマホ表示）" loading="lazy"><figcaption><b>塗装</b><span>平塚市</span></figcaption></figure>
+        <figure><img src="samples/sample-tsutsui.jpg" alt="工務店のサンプルページ（スマホ表示）" loading="lazy"><figcaption><b>工務店</b><span>藤沢市</span></figcaption></figure>
+        <figure><img src="samples/sample-hamaya.jpg" alt="リフォーム会社のサンプルページ（スマホ表示）" loading="lazy"><figcaption><b>リフォーム</b><span>茅ヶ崎市</span></figcaption></figure>
+        <figure><img src="samples/sample-jun.jpg" alt="工務店のサンプルページ（スマホ表示）" loading="lazy"><figcaption><b>工務店</b><span>平塚市</span></figcaption></figure>
+      </div>
+      <p class="ex-note rv">※ 実在の会社さまへの提案用に作成したサンプルページの例です。導入実績ではありません。</p>
+    </div>
+  </section>
+
+  <!-- 4. 悩み → 解決 -->
   <section class="s">
     <div class="wrap">
       <div class="sh c rv"><span class="lb">こんな理由で、後回しにしていませんか</span><h2>ホームページの<br><span class="nw">「高い・面倒・<span class="nw2">分からない」を、</span></span><br>ぜんぶ引き受けます。</h2></div>
@@ -464,7 +491,7 @@
         <span class="tag">サービス開始キャンペーン</span>
         <h3>ライトプラン <s>月額9,800円</s> → 月額 <b>7,800円</b>（税込）</h3>
         <p>11月30日までのご相談・先着5社限定です。契約開始から12か月間この料金で、12か月で24,000円お得になります。13か月目からは通常料金（月額9,800円）に戻ります。最低契約6か月は通常どおりです。</p>
-        <p>対象は、11月30日までにInstagramのDMでご相談いただいた方のうち、先着5社です（ご相談の順番で数えます）。</p>
+        <p>対象は、11月30日までにInstagramのDMでご相談いただいた方のうち、先着5社です（ご相談の順番で数えます）。枠が埋まった場合は、このページでお知らせします。</p>
       </div>
       <div class="plans rv">
         <article class="plan rec">
@@ -509,7 +536,7 @@
           <thead><tr><th scope="col"></th><th scope="col">制作費</th><th scope="col">月々</th></tr></thead>
           <tbody>
             <tr><th scope="row">制作会社</th><td>20〜50万円</td><td>5千〜2万円</td></tr>
-            <tr class="me"><th scope="row">Kura Works</th><td>0円</td><td>9,800円〜（キャンペーン中は7,800円）</td></tr>
+            <tr class="me"><th scope="row">Kura Works</th><td>0円</td><td>9,800円〜（先着5社は12か月間 7,800円）</td></tr>
           </tbody>
         </table>
         <p class="src">※ 2026年10月時点の公開料金をもとにした当方調べの目安です。</p>
@@ -556,7 +583,7 @@
         <div><dt><span>Q</span>あとからプランを変えられますか。</dt><dd>はい、いつでも変更できます。ライトで始めて、必要になったらスタンダードに変えることもできます。</dd></div>
         <div><dt><span>Q</span>ホームページのアドレス（ドメイン）は誰のものですか。</dt><dd>御社の名義で取得します。アドレスは御社のものです。</dd></div>
         <div><dt><span>Q</span>写真や文章は自分で用意する必要がありますか。</dt><dd>最初のサンプルは、InstagramやGoogleマップに出ている情報をもとにこちらで作ります。公開前に、御社の写真や確認した文章に差し替えます。</dd></div>
-        <div><dt><span>Q</span>お店ではなく、塗装や造園などの会社でも頼めますか。</dt><dd>はい。施工事例・対応エリア・お見積りの問い合わせ先を中心にしたページをお作りします。</dd></div>
+        <div><dt><span>Q</span>職人や工務店ではなく、お店でも頼めますか。</dt><dd>はい。メニューや営業時間、場所、問い合わせ先を中心にしたページをお作りします。塗装・造園・工務店など職人系の会社さまが中心ですが、小さなお店からのご相談も歓迎です。</dd></div>
         <div><dt><span>Q</span>AI コンサルでは何をしてもらえますか。</dt><dd>お店や会社の業務の流れをお聞きして、AIで楽にできる所を一緒に考えます。InstagramのDMで回数を気にせずご相談いただけて、AIを使ったデータ分析や資料作成の代行もお任せいただけます（スタンダードプラン）。</dd></div>
         <div><dt><span>Q</span>予約システムなどの開発も頼めますか。</dt><dd>ご相談いただけます。月額プランには含まれないため、内容をお聞きして別途お見積りします。なお、データ分析・資料作成の代行はスタンダードプランに含まれます。</dd></div>
       </dl>
